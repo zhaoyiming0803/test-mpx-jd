@@ -12,7 +12,9 @@
     "watch:prod:cross": "npm run watch:prod --wx --ali --swan",
     "build:cross": "npm run build --wx --ali --swan",
     "build:dev:cross": "npm run build:dev --wx --ali --swan",
-    "help": "node ./build/build.js --help"
+    "help": "node ./build/build.js --help",
+    "build:jd": "npm run build:dev --jd",
+    "watch:jd": "npm run watch --jd"
   },
   "author": "zhaoyiming <zhaoyiming0803@gmail.com>",
   "license": "ISC",

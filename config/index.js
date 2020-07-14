@@ -17,6 +17,6 @@ module.exports = function getConfig (isProduction) {
     context: resolveSrc(),
     dllPath: resolve('dll'),
     env: isProduction ? prodEnv : devEnv,
-    supportedModes:['wx', 'ali', 'swan', 'qq', 'tt']
+    supportedModes:['wx', 'ali', 'swan', 'qq', 'tt', 'jd']
   }
 }
