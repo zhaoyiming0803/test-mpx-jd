@@ -1,19 +1,73 @@
 <template>
-  <list></list>
+  <view>
+    <view>this is index.mpx</view>
+    <scroll-view
+      style="height: 300rpx;"
+      scroll-y
+      enable-flex="{{true}}"
+      bindscrolltoupper="upper"
+      bindscrolltolower="lower"
+      bindscroll="scroll"
+      bindrefresherpulling="true"
+      bindtouchstart="scroll"
+    >
+      <view class="scroll-view_H">
+        <view id="A1" class="scroll-view-item_H scroll-1">A1</view>
+        <view id="A2" class="scroll-view-item_H scroll-2">A2</view>
+        <view id="A3" class="scroll-view-item_H scroll-3">A3</view>
+      </view>
+      <view class="scroll-view_H">
+        <view id="B1" class="scroll-view-item_H scroll-2">B1</view>
+        <view id="B2" class="scroll-view-item_H scroll-3">B2</view>
+        <view id="B3" class="scroll-view-item_H scroll-1">B3</view>
+      </view>
+      <view class="scroll-view_H">
+        <view id="C1" class="scroll-view-item_H scroll-3">C1</view>
+        <view id="C2" class="scroll-view-item_H scroll-1">C2</view>
+        <view id="C3" class="scroll-view-item_H scroll-2">C3</view>
+      </view>
+    </scroll-view>
+
+    <swiper
+      indicator-dots
+      indicator-color="rgba(0,0,0,.5)"
+      indicator-active-color="#000"
+      current="{{current}}"
+      interval="5000"
+      duration="500"
+      easing-function="linear"
+      bindtransition="transition"
+    >
+      <block jd:for="{{background}}" jd:key="*this">
+        <swiper-item item-id="{{'swiperItem' + index}}">
+          <view current-item-id="item" class="swiper-item {{item}}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <textarea placeholder="form 中的 textarea" name="textarea" hold-keyboard="{{true}}" bindkeyboardheightchange="keyboardheightchange" />
+  </view>
 </template>
 
 <script>
   import { createPage } from '@mpxjs/core'
 
   createPage({
-    onLoad () {}
+    data: {
+      current: 0,
+      background: ['red', 'orange', 'yellow', 'green']
+    },
+    onLoad () {},
+    methods: {
+      transition () {},
+      keyboardheightchange () {}
+    }
   })
 </script>
 
 <script type="application/json">
   {
     "usingComponents": {
-      "list": "../components/list"
+      
     }
   }
 </script>
