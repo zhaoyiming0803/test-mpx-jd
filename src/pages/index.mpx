@@ -1,6 +1,7 @@
 <template>
   <view>
     <view>this is index.mpx</view>
+    <list></list>
     <scroll-view
       style="height: 300rpx;"
       scroll-y
@@ -67,7 +68,18 @@
 <script type="application/json">
   {
     "usingComponents": {
-      
-    }
+      "list": "../components/list.mpx"
+    },
+    "navigationBarTitleText": "首页"
   }
 </script>
+
+<style lang="stylus" scoped>
+  .box1
+    background-color red
+</style>
+
+<style lang="stylus" scoped>
+  .box2
+    background-color blue
+</style>
