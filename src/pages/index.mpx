@@ -55,7 +55,8 @@
   createPage({
     data: {
       current: 0,
-      background: ['red', 'orange', 'yellow', 'green']
+      background: ['red', 'orange', 'yellow', 'green'],
+      data: null
     },
     onLoad () {},
     methods: {
