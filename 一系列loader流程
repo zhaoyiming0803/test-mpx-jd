@@ -1,0 +1,72 @@
+/* script */
+export * from "
+	!!babel-loader
+	!../node_modules/@mpxjs/webpack-plugin/lib/selector?type=script&index=0
+	!./app.mpx
+"
+
+/* styles */
+require("
+	!!../node_modules/@mpxjs/webpack-plugin/lib/extractor?type=styles&index=0
+	!../node_modules/@mpxjs/webpack-plugin/lib/wxss/loader?root=&importLoaders=1&extract=true
+	!../node_modules/@mpxjs/webpack-plugin/lib/style-compiler/index?{\"moduleId\":\"m2bbdcb2d\",\"scoped\":false,\"sourceMap\":false}
+	!../node_modules/@mpxjs/webpack-plugin/lib/selector?type=styles&index=0
+	!./app.mpx
+")
+
+/* json */
+require("
+	!!../node_modules/@mpxjs/webpack-plugin/lib/extractor?type=json&index=0
+	!../node_modules/@mpxjs/webpack-plugin/lib/json-compiler/index?root=
+	!../node_modules/@mpxjs/webpack-plugin/lib/selector?type=json&index=0
+	!./app.mpx
+")
+
+
+--------------------------------------
+
+
+global.currentModuleId
+
+/* script */
+export * from "
+	!!babel-loader
+	!../../node_modules/@mpxjs/webpack-plugin/lib/selector?type=script&index=0
+	!./index.mpx?isFirst=true
+"
+
+/* styles */
+require("
+	!!../../node_modules/@mpxjs/webpack-plugin/lib/extractor?type=styles&index=0
+	!../../node_modules/@mpxjs/webpack-plugin/lib/wxss/loader?root=&importLoaders=1&extract=true
+	!../../node_modules/@mpxjs/webpack-plugin/lib/style-compiler/index?{\"moduleId\":\"me6a76386\",\"scoped\":false,\"sourceMap\":false}
+	!stylus-loader
+	!../../node_modules/@mpxjs/webpack-plugin/lib/selector?type=styles&index=0
+	!./index.mpx?isFirst=true
+")
+
+require("
+	!!../../node_modules/@mpxjs/webpack-plugin/lib/extractor?type=styles&index=1
+	!../../node_modules/@mpxjs/webpack-plugin/lib/wxss/loader?root=&importLoaders=1&extract=true
+	!../../node_modules/@mpxjs/webpack-plugin/lib/style-compiler/index?{\"moduleId\":\"me6a76386\",\"scoped\":false,\"sourceMap\":false}
+	!stylus-loader
+	!../../node_modules/@mpxjs/webpack-plugin/lib/selector?type=styles&index=1
+	!./index.mpx?isFirst=true
+")
+
+/* json */
+require("
+	!!../../node_modules/@mpxjs/webpack-plugin/lib/extractor?type=json&index=0
+	!../../node_modules/@mpxjs/webpack-plugin/lib/json-compiler/index?root=
+	!../../node_modules/@mpxjs/webpack-plugin/lib/selector?type=json&index=0
+	!./index.mpx?isFirst=true
+")
+
+/* template */
+require("
+	!!../../node_modules/@mpxjs/webpack-plugin/lib/extractor?type=template&index=0
+	!../../node_modules/@mpxjs/webpack-plugin/lib/wxml/wxml-loader?root=
+	!../../node_modules/@mpxjs/webpack-plugin/lib/template-compiler/index?{\"usingComponents\":[],\"hasScoped\":false,\"isNative\":false,\"moduleId\":\"me6a76386\",\"root\":\"\"}
+	!../../node_modules/@mpxjs/webpack-plugin/lib/selector?type=template&index=0
+	!./index.mpx?isFirst=true
+")
