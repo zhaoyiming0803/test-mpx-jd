@@ -5,3 +5,4 @@ deploy/
 output/
 dist/
 .vscode/
+/package-lock.json
